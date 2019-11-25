@@ -149,14 +149,23 @@ aside {
   }
 }
 footer {
+  background-image: url("./assets/bg.png");
   text-align: center;
   position: relative;
+  background-size: 20%;
+  background-repeat: repeat;
   .wrapper {
     position: relative;
+    background-color: slategrey;
   }
   img {
     width: 50%;
     height: 100%;
+  }
+  .guestbook {
+    font-family: monospace;
+    color: purple;
+    font-size: 30px;
   }
 }
 .second-section {
@@ -222,8 +231,8 @@ footer {
 }
 
 .third-section {
-   // BURHAN'S SECTION
-   @font-face {
+  // BURHAN'S SECTION
+  @font-face {
     font-family: "blox";
     src: url("./assets/fonts/Blox2.ttf") format("truetype");
   }
@@ -235,35 +244,42 @@ footer {
   //keyframes
   @keyframes rotating {
     from {
-
       transform: rotate(0deg);
     }
     to {
       transform: rotate(360deg);
     }
-}
+  }
 
   @keyframes fade-in-out {
-  0%   { opacity: 0; }
-  100% { opacity: 1; }
-}
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
 
   @keyframes moving-background {
-  0%{background-position:0% 50%}
-  100%{background-position:0% 100%}
-}
-background-image: url('./assets/snow.gif');
-background-size: cover;
+    0% {
+      background-position: 0% 50%;
+    }
+    100% {
+      background-position: 0% 100%;
+    }
+  }
+  background-image: url("./assets/snow.gif");
+  background-size: cover;
 
   .third-objective {
     display: flex;
     align-items: center;
     border: solid red 2px;
     color: black;
-    font-family: 'blox';
+    font-family: "blox";
     min-height: 50vh;
- 
-    .title-box{
+
+    .title-box {
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -271,65 +287,64 @@ background-size: cover;
       height: 100%;
       padding: 1em;
       font-size: 1.5em;
-      img{
+      img {
         max-width: 100%;
         max-height: 100%;
       }
     }
 
-.objectives{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  align-content: center;
-  font-family: good-times;
-  color: white;
-  background: repeating-linear-gradient(45deg,
-  black,
-  black 10px,
-  transparent 10px,
-  transparent 20px
-);
-background-size: 200% 200%;
-animation: moving-background .8s linear infinite;
-  
-  h1 {
-    font-size: 4em;  
-    font-family: blox;
-    margin-bottom: 1em;
-    padding: 5px;
-    width: 550px;
-    background: green;
-    color: yellow;
-    border: solid red 2px;
-    &:hover {
-      background: #40ff4a;
-      color: rgb(255, 6, 180);
-      border: solid blue 2px;
+    .objectives {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      align-content: center;
+      font-family: good-times;
+      color: white;
+      background: repeating-linear-gradient(
+        45deg,
+        black,
+        black 10px,
+        transparent 10px,
+        transparent 20px
+      );
+      background-size: 200% 200%;
+      animation: moving-background 0.8s linear infinite;
+
+      h1 {
+        font-size: 4em;
+        font-family: blox;
+        margin-bottom: 1em;
+        padding: 5px;
+        width: 550px;
+        background: green;
+        color: yellow;
+        border: solid red 2px;
+        &:hover {
+          background: #40ff4a;
+          color: rgb(255, 6, 180);
+          border: solid blue 2px;
+        }
+      }
+      img {
+        width: 20em;
+        height: 12em;
+      }
+    }
+    ul {
+      background: blue;
+      li {
+        animation: fade-in-out 3s linear infinite;
+        padding: 0.5em;
+      }
     }
   }
-  img{
-    width: 20em;
-    height: 12em;
-  }
-}
-ul{
-  background: blue;
-li{
-  animation: fade-in-out 3s linear infinite;
-  padding: .5em;
-}
-}
-}
-
-
 }
 
 .fourth-section {
   // CHARLES'S SECTION
 
   background-color: red;
-  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
 
   /* background-color: #fff8dc; */
   .fourth-objective {
@@ -344,6 +359,11 @@ li{
   background-image: url("./assets//christmas-tree.png");
   background-size: 50px;
   background-repeat: repeat;
+  h1 {
+    color: red;
+    font-size: 100px;
+    background-color: black;
+  }
 }
 
 @keyframes spin {
